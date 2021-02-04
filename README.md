@@ -28,3 +28,16 @@ Usage:
 	interval: integer representing number of seconds in between socket accepts.
 	--silent: supresses output when running server.
 ```
+
+## Example Uses
+
+This is used as a process to collect GPU performance data from clusters. In this case, you most likely want to serve on a port like so:
+
+```console
+$ ./perses --serve tcp --port 5045 --silent
+```
+
+This will write the data read off of the GPUs available on the machine to a local socket on port 5045.
+The `--silent` flag supresses out put from the server, which logs all messages sent to clients.
+
+
