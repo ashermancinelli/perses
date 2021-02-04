@@ -7,7 +7,7 @@ project(perses CXX)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
-find_package(PersesBoost REQUIRED)
+find_package(Boost 1.68.0 REQUIRED COMPONENTS iostreams system)
 find_package(NVML REQUIRED)
 find_package(Threads REQUIRED)
 
