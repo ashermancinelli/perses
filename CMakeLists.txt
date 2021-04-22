@@ -11,5 +11,7 @@ find_package(Boost 1.68.0 REQUIRED COMPONENTS iostreams system)
 find_package(NVML REQUIRED)
 find_package(Threads REQUIRED)
 
+add_definitions(-DBOOST_ERROR_CODE_HEADER_ONLY)
+
 add_subdirectory(src)
 add_subdirectory(test)
