@@ -1,7 +1,7 @@
 #include <thread>
 #include <chrono>
 #include <cassert>
-#include <NVMLWatcher.hpp>
+#include "NVMLWatcher.hpp"
 #include <boost/asio.hpp>
 
 using boost::asio::ip::tcp;
@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
   std::ostream& os = std::cout;
 
   try {
-    for (int i=1; i<args.size(); i++) {
+    for (long unsigned i=1; i<args.size(); i++) {
       if (args[i] == "--gpulist") {
         assert(false && "GPUlist support is incomplete!");
       }
